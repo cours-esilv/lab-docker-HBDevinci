@@ -1,0 +1,32 @@
+version: '3'
+services:
+  my-back-end:
+    image: hbdevinci/mypythonapp:tpmlops
+    ports:
+      - "5000:5000"
+    environment:
+      - CURRENT_ENVIRONMENT=development
+    volumes:
+      - /workspace/lab-docker-HBDevinci/app/front:/workspace/lab-docker-HBDevinci/app/front
+
+  my-front-end:
+    image: hbdevinci/myfrontendapp:front_mlops
+    ports:
+      - "80:80"
+    environment:
+      - FRONT_END_VARIABLE=value
+  
+  my-back-end-2:
+    image: hbdevinci/mypythonapp:tpmlops
+    ports:
+      - "5001:5000"  
+    environment:
+      - CURRENT_ENVIRONMENT=development
+
+  my-back-end-3:
+    image: hbdevinci/mypythonapp:tpmlops
+    ports:
+      - "5003:5000" 
+    environment:
+      - CURRENT_ENVIRONMENT=development
+

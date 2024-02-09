@@ -1,0 +1,2 @@
+docker exec -it back-end /bin/bash
+curl localhost:5000/write/testmessage

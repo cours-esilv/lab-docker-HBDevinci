@@ -1,0 +1,2 @@
+docker run -d -p 5000:5000 -e CURRENT_ENVIRONMENT=development --name back-end hbdevinci/mypythonapp:tpmlops
+docker run -d -p 80:80 --name front-end --env WS_BACK_URL=http://back-end:5000 hbdevinci/frontapp:front_mlops
